@@ -6,7 +6,7 @@ namespace DAL
     public class EFContext: DbContext
     { 
         public EFContext() : base("WebApi") {
-            //Database.SetInitializer<EFContext>(new MigrateDatabaseToLatestVersion<EFContext, Configuration>());
+            Database.SetInitializer<EFContext>(new MigrateDatabaseToLatestVersion<EFContext, Configuration>());
         }
 
         public DbSet<Usuario> Usuarios { get; set; }

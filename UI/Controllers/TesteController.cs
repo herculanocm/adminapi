@@ -10,6 +10,7 @@ namespace UI.Controllers
     {
         [HttpGet]
         [Route("api/teste")]
+        [Authorize(Roles = "Admin")]
         [ResponseType(typeof(Usuario))]
         public IHttpActionResult GetUser()
         {

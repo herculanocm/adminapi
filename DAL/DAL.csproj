@@ -52,6 +52,11 @@
     <Compile Include="Imp\UsuarioDAL.cs" />
     <Compile Include="Interfaces\ISessaoDAL.cs" />
     <Compile Include="Interfaces\IUsuarioDAL.cs" />
+    <Compile Include="Migrations\201705111734534_InitialCreate.cs" />
+    <Compile Include="Migrations\201705111734534_InitialCreate.Designer.cs">
+      <DependentUpon>201705111734534_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +68,11 @@
       <Project>{da7ac349-3aaf-436a-8bd6-9f91669cb6c0}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201705111734534_InitialCreate.resx">
+      <DependentUpon>201705111734534_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

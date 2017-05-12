@@ -2,7 +2,8 @@
 using System.Linq;
 using System.Threading.Tasks;
 using DTO;
- 
+using System.Collections.Generic;
+
 namespace DAL
 {
     public class UsuarioDAL : IUsuarioDAL
@@ -28,8 +29,16 @@ namespace DAL
         {
 
             Usuario u = Busca(usuario);
+            List<Sessao> _sessoes = u.Sessoes.ToList();
 
-           
+           foreach (Sessao _s in _sessoes)
+            {
+                _efContext.Sessoes.Remove(_s);   
+            }
+
+
+      
+
 
             _efContext.Usuarios.Remove(u);
             _efContext.SaveChanges();

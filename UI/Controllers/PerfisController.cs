@@ -9,6 +9,9 @@ using BLL;
 using DTO;
 using System.Web.Http.Description;
 using Newtonsoft.Json;
+using System.Net.Http.Headers;
+using System.Text;
+using UI.Results;
 
 namespace UI.Controllers
 {
@@ -32,9 +35,9 @@ namespace UI.Controllers
                     ReferenceLoopHandling = ReferenceLoopHandling.Serialize
                 });
                 */
-           
 
-            return Ok(perfis);
+
+            return new RespostaPadrao(Request, HttpStatusCode.OK, "Perfis listado com sucesso", perfis);
         }
 
 
@@ -68,5 +71,17 @@ namespace UI.Controllers
                 return InternalServerError();
             }
         }
+
+        public HttpResponseMessage Resposta(HttpStatusCode statusCode)
+        {
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, "value");
+            response.Content = new StringContent("hello", Encoding.Unicode);
+            response.Headers.CacheControl = new CacheControlHeaderValue()
+            {
+                MaxAge = TimeSpan.FromMinutes(20)
+            };
+            return response;
+        }
+
     }
 }

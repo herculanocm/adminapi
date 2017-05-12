@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Imp\PerfilBLL.cs" />
     <Compile Include="Imp\SessaoBLL.cs" />
     <Compile Include="Imp\UsuarioBLL.cs" />
+    <Compile Include="Interfaces\IPerfilBLL.cs" />
     <Compile Include="Interfaces\ISessaoBLL.cs" />
     <Compile Include="Interfaces\IUsuarioBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,6 +11,6 @@ namespace DTO
         public string Role { get; set; }
         public string Descricao { get; set; }
 
-        public virtual ICollection<Usuario> Usuario { get; set; }
+        public virtual ICollection<Usuario> Usuarios { get; set; }
     }
 }

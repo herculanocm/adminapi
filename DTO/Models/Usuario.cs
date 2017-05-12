@@ -12,7 +12,7 @@ namespace DTO
         public string Senha { get; set; }
         public string Nome { get; set; }
 
-        public virtual ICollection<Perfil> Perfil { get; set; }
-        public virtual ICollection<Sessao> Sessao { get; set; }
+        public virtual ICollection<Perfil> Perfis { get; set; }
+        public virtual ICollection<Sessao> Sessoes { get; set; }
     }
 }

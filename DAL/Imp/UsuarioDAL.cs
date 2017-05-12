@@ -24,9 +24,26 @@ namespace DAL
             return _efContext.Usuarios.OrderBy(c => c.Login);
         }
 
-        public void salva(Usuario usuario)
+        public void Remove(Usuario usuario)
         {
-            throw new NotImplementedException();
+
+            Usuario u = Busca(usuario);
+
+           
+
+            _efContext.Usuarios.Remove(u);
+            _efContext.SaveChanges();
+        }
+
+        public void Salva(Usuario usuario)
+        {
+            _efContext.Usuarios.Add(usuario);
+            _efContext.SaveChanges();
+        }
+
+        public Usuario Busca(Usuario usuario)
+        {
+            return _efContext.Usuarios.Find(usuario.Login);
         }
     }
 }

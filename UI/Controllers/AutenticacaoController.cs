@@ -12,7 +12,7 @@ namespace UI.Controllers
         private SessaoBLL _sessaoBLL = new SessaoBLL();
 
         [HttpPost] 
-        [Route("api/Autentica")]
+        [Route("api/admin/auth")]
         [AllowAnonymous]
         public IHttpActionResult Login(DTO.Usuario usuario)
         {

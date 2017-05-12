@@ -48,8 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Helpers\EFContext.cs" />
+    <Compile Include="Imp\PerfilDAL.cs" />
     <Compile Include="Imp\SessaoDAL.cs" />
     <Compile Include="Imp\UsuarioDAL.cs" />
+    <Compile Include="Interfaces\IPerfilDAL.cs" />
     <Compile Include="Interfaces\ISessaoDAL.cs" />
     <Compile Include="Interfaces\IUsuarioDAL.cs" />
     <Compile Include="Migrations\201705111734534_InitialCreate.cs" />

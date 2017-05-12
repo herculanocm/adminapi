@@ -26,9 +26,14 @@ namespace BLL
             return _usuarioDAL.Lista();
         }
 
-        public void salva(Usuario usuario)
+        public void Remove(Usuario usuario)
         {
-            throw new NotImplementedException();
+            _usuarioDAL.Remove(usuario);
+        }
+
+        public void Salva(Usuario usuario)
+        {
+            _usuarioDAL.Salva(usuario);
         }
     }
 }

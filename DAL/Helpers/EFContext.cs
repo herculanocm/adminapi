@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using DTO;
+using DAL.Migrations;
 
 namespace DAL
 {

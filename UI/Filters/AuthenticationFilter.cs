@@ -87,7 +87,7 @@ namespace UI.Filters
 
             s.Fim = DateTime.Now.AddHours(1.0);    //Atualiza prazo para expirar, a cada requisição
             IIdentity identity = new CustomIdentity(s.Usuario, "Basic");
-            IPrincipal p = new GenericPrincipal(identity, s.Usuario.Perfil.Select(x => x.Role).ToArray());
+            IPrincipal p = new GenericPrincipal(identity, s.Usuario.Perfis.Select(x => x.Role).ToArray());
 
             return p;
         }
